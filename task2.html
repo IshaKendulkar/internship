@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Timeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+
+        .timeline-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 8px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #10b981, #0ea5e9);
+        }
+
+        .timeline-events {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .timeline-event {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-event:nth-child(1) .timeline-dot {
+            background-color: #10b981;
+        }
+
+        .timeline-event:nth-child(2) .timeline-dot,
+        .timeline-event:nth-child(3) .timeline-dot,
+        .timeline-event:nth-child(4) .timeline-dot {
+            background-color: #0ea5e9;
+        }
+
+        .timeline-year {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0ea5e9;
+            margin-bottom: 20px;
+        }
+
+        .timeline-description {
+            font-size: 15px;
+            color: #4b5563;
+            line-height: 1.6;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-events {
+                flex-direction: column;
+                gap: 60px;
+            }
+
+            .timeline-line {
+                top: 0;
+                left: 50%;
+                right: auto;
+                width: 4px;
+                height: 100%;
+                transform: translateX(-50%);
+            }
+
+            .timeline-event {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-events">
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">1982</div>
+                    <div class="timeline-description">
+                        Started as Medical Representative at Bevit Pharmaceuticals.
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">1987</div>
+                    <div class="timeline-description">
+                        Promoted to Area Manager, expanded Karnataka operations.
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">1994</div>
+                    <div class="timeline-description">
+                        Became Regional Manager, led 25-member team.
+                    </div>
+                </div>
+
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">1998</div>
+                    <div class="timeline-description">
+                        Assigned Maharashtra region for business expansion.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
